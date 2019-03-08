@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "report": "../component/report/report"
+  },
+  "enablePullDownRefresh": true
+}

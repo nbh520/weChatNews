@@ -1,0 +1,34 @@
+/* pages/index/local/local.wxss */
+.local_city{
+  width: 100vw;
+  height: 445rpx;
+  position: relative;
+  overflow: hidden;
+}
+.local_city .local_weather_wallpaper{
+  width: 100%;
+  height: 100%;
+}
+.local_city .local_city_text{
+  height: 55%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: #fff;
+}
+.local_city .local_city_text view{
+  height: 50%;
+  padding-left: 15px;
+  box-sizing: border-box;
+}
+.local_city_name{
+  font-size: 35px;
+}
+.local_switch_city{
+  font-size: 15px;
+  margin-left: 15px;
+}
+.local_weather_type,.local_weather_temperature{
+  margin-right: 10px;
+}

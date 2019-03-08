@@ -1,0 +1,72 @@
+/* pages/index/video/video.wxss */
+
+.video .one-video{
+  width: 100vw;
+  height: 540rpx;
+  padding-bottom: 5rpx;
+  font-size: 0;
+  position: relative;
+  background-color: #eee;
+  overflow: hidden;
+}
+.video video{
+  width: 100vw;
+  height: 425rpx;
+}
+.video .video_title{
+  position: absolute;
+  left: 15rpx;
+  color: #fff;
+  top: 15rpx;
+  font-size: 18px;
+}
+.video .video_info{
+  width: 100vw;
+  /* height: 100rpx; */
+  padding: 20rpx 0;
+  background-color: #fff;
+  font-size: 15px;
+}
+.video .video_info .video_info_page{
+  width: 70%;
+  float: left;
+  border-right: 1px solid #ccc;
+  box-sizing: border-box;
+}
+.video .video_info .video_share{
+  width: 30%;
+  float: left;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+.video .video_info .video_share .video_reply_num{
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -25px;
+}
+.video .video_info .video_info_author_image{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-left: 15px;
+  vertical-align: middle;
+}
+.video .video_info .video_author_name{
+  color: #232323;
+  margin-left: 10px;
+  font-size: 16px;
+}
+.video .video_info .video_share image{
+  width: 30px;
+  height: 30px;
+}
+.video .video_info .video_share .video_reply{
+  width: 32px;
+  height: 30px;
+  padding-right: 10px;
+}
+.video .video_info .video_share .video_friend{
+  padding-left: 10px;
+}

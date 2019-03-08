@@ -1,0 +1,18 @@
+<!--pages/index/local/local.wxml-->
+<template name='local'>
+  <view class='local_city'>
+  <!-- http://p15.qhimg.com/t019c4fd29b1b8f69b5.jpg -->
+    <image src='{{wallpaper}}' class='local_weather_wallpaper'></image>
+    <view class='local_city_text'>
+      <view class='local_city_info'>
+        <text class='local_city_name'>{{city}}</text>
+        <text class='local_switch_city'>切换城市</text>
+      </view>
+      <view class='local_city_weather'>
+        <text class='local_weather_type'>{{type}}</text>
+        <text class='local_weather_temperature'>{{temperature}}°C</text>
+        <text class='local_weather_pm'>PM值 {{pm}}</text>
+      </view>
+    </view>
+  </view>
+</template>

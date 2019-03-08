@@ -1,0 +1,62 @@
+/* pages/component/comment/comment.wxss */
+.comment_component{
+  margin-top: 10px;
+}
+.comment_component .comment_left{
+  width: 10%;
+  height:100%;
+  float: left;
+  text-align: center;
+}
+.comment_component .comment_left image{
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+
+}
+.comment_component .comment_right{
+  width: 90%;
+  float: left;
+  padding-right: 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.comment_component .comment_right .comment_info .comment_awesome{
+  float: right;
+  font-size: 15px;
+  vertical-align: middle;
+}
+.comment_component .comment_right .comment_info .comment_awesome image{
+  width: 20px;
+  height: 20px;
+  vertical-align: top;
+}
+.comment_component .comment_right .comment_info .comment_nickname{
+  font-size: 14px;
+  font-weight: 500;
+}
+.comment_component .comment_right .comment_content{
+  font-size: 15px;
+  line-height: 20px;
+}
+.comment_component .comment_right .commetn_reply{
+  margin:10px 0;
+}
+.comment_component .comment_right .commetn_reply text{
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  color: #c7c7c7;
+}
+.comment_component .comment_right .commetn_reply button{
+  padding: 0 10px;
+  font-size: 13px;
+  display: inline-block;
+  line-height: 25px;
+  vertical-align: bottom;
+  color: #c7c7c7;
+  border-radius: 20px;
+  margin-left: 10px;
+  background-color: #fff;
+  border: 1px solid #eee;
+}

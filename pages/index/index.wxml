@@ -1,0 +1,26 @@
+<!--index.wxml-->
+<import src="./video/video.wxml"/>
+<import src="./local/local.wxml"/>
+<view class='nav'>
+  <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'selectText' : ''}}" wx:key="unique" bindtap='bindSwitch'>{{item}}</text>
+</view>
+<view class="content">
+  <view class="pull_refresh" wx:if="{{pullRefresh}}">下拉刷新</view>
+  <view class='pull_refresh_success' wx:if="{{pullRefreshSuccess}}" >发现十条新内容</view>
+
+  <view hidden="{{currentTab!==0}}" wx:for="{{newsArr}}" class='one_report' >
+    <!-- 今日头条 -->
+    <!-- <report  reportUser="{{item.source}}" reportTitle="{{item.title}}" reportContent="{{item.abstract}}" reportImage="{{item.image_url}}" reportUserImage="{{item.media_avatar_url}}" reportUrl="{{item.source_url}}"/> -->
+    <!-- 网易新闻 -->
+    <report  reportUser="{{item.source}}" reportTitle="{{item.title}}" reportContent="{{item.digest}}" reportImage="{{item.imgsrc}}" reportUserImage="{{item.media_avatar_url}}" reportUrl="{{item.url}}" reportTime="{{item.mtime}}" reportReply="{{item.replyCount}}" reportAwesome="{{item.votecount}}"/>
+  </view>
+  <view hidden="{{currentTab!==1}}" class='one_video' >
+    <block wx:for="{{videoArr}}">
+      <template is="video" data="{{...item}}"></template>
+    </block>
+  </view>
+  <view hidden="{{currentTab!==2}}" class='one_local_report' >
+    <template is="local" data="{{...local}}"></template>
+  </view>
+
+</view>

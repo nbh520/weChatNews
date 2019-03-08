@@ -1,0 +1,91 @@
+/* pages/my/my.wxss */
+
+page{
+  display: block;
+  min-height: 100%;
+  background-color: #eee;
+}
+
+.login{
+  width: 80%;
+  height: auto;
+  margin: 40% auto;
+  background-color: #fff;
+  text-align: center;
+  border-radius: 3px;
+}
+.login .login-text{
+  display: block;
+  padding:20px 0 20px 0;
+}
+.login button::after{
+  border: 0px;
+}
+.login button{
+  background-color: #fff;
+  color:#2983E9;
+  border: 0px;
+  border-top: 1px solid #777;
+  border-radius: 0;
+  margin-top: 20rpx;
+  outline: none;
+}
+.info{
+  width: 100%;
+  height: auto;
+  background: #fff;
+  padding: 20px 10px;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ccc;
+}
+.info image{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  vertical-align: bottom;
+
+}
+.info>view{
+  display: inline-block
+}
+.userinfo-gender,.userinfo-city{
+  font-size: 12px;
+  color:#777;
+}
+.info .info-right{
+  float: right;
+  height: 100%;
+  margin-right: 20px;
+  margin-top: 10px;
+}
+.group{
+  width: 100%;
+  background-color: #fff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #000;
+}
+.group text{
+  display: inline-block;
+  padding: 10px 0px;
+  margin: 0 20px;
+}
+.notice{
+  border-bottom: 1px solid red;
+}
+.info .setting-btn{
+  background-color: #2983E9;
+  border-radius: 30px;
+  padding: 0 20px;
+  line-height: 40px;
+}
+.info .setting-btn .font-icon{
+   width: 20px;
+   height: 20px;
+   vertical-align: middle;
+}
+.info .setting-btn text{
+  color: #fff;
+  font-size: 15px;
+}

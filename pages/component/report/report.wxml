@@ -1,0 +1,37 @@
+<!--pages/component/report/report.wxml-->
+<view class='content'>
+  <view class='news_user'>
+    <image src='{{reportUserImage}}'></image>
+    <text>{{reportUser}}</text>
+  </view>
+  <view bindtap="bindGoNewsContent"  class='news_title'>
+    <text>{{reportTitle}}</text>
+  </view>
+  <view bindtap="bindGoNewsContent"  class='news_contetn'>
+    <view class='content_text'>
+      <text>{{reportContent}}</text>
+    </view>
+    <view class='content_image'>
+      <image src='{{reportImage}}'></image>
+    </view>
+  </view>
+  <view class='news-operatting'>
+    <view class='awesome' bindtap="bindAwesome">
+      <block >
+       <image  src='{{isAwesome ? "./../../../images/awesome_selected.png" : "./../../../images/awesome.png"}}'></image>
+        {{reportAwesome}}
+      </block>
+    </view>
+    <view class='comment'>
+      <image src='./../../../images/reply.png'></image> 
+      {{reportReply}}   
+    </view>
+    <view class='share'>
+      <button open-type='share'>
+        <image src='./../../../images/weChat.png' ></image>
+        好友
+      </button>
+      
+    </view>
+  </view>
+</view>

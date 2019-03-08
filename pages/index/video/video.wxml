@@ -1,0 +1,23 @@
+<!--pages/index/video/video.wxml-->
+<template name="video">
+  <view class='video'>
+    <view class='one-video'>
+      <video src="{{data.playUrl}}" controls  enable-play-gesture="true" poster='{{data.cover.detail}}' objectFit='fill' title="{{data.title}}" custom-cache="{{false}}"></video>
+      <text class='video_title'>{{data.title}}</text>
+      <view class='video_info'>
+        <view class='video_info_page'>
+          <image class='video_info_author_image' src='{{data.author.icon}}'></image>
+          <text class='video_author_name'>{{data.author.name}}</text>
+        </view>
+        <view class='video_share'>
+          <image class='video_reply' src='./../../images/video_reply.png'></image>
+          <text class='video_reply_num'>{{data.consumption.replyCount}}</text>
+          <image class='video_friend' src='./../../images/friend.png'></image>
+
+        </view>
+      </view>
+    </view>
+     
+  </view>
+  
+</template>

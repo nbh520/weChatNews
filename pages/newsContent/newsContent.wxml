@@ -1,0 +1,25 @@
+<!--pages/newsContent/newsContent.wxml-->
+<import src="../../wxParse/wxParse.wxml"/>
+<view wx:if="{{newsLoadding}}" class='cover_load'>
+  <image class='news_load' src='./../../images/load.png' ></image>
+</view>
+<view class='news_all'>
+  <view class='news_title'>
+    <text>{{newsData.title}}</text>
+  </view>
+  <view class='news_author'>
+    <image src='{{newsData.reportUserImage}}'></image>
+    <text class='news_author_name'> {{newsData.reportUser}} </text>
+    <text class='news_time'>{{newsData.reportTime}}</text>
+  </view>
+  <view class='news_content'>
+    <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+  </view>
+
+  <view class='news_comment'>
+    <view wx:if="{{!newsLoadding}}" class='all_comment'>全部评论</view>
+    <block wx:for="{{newsData.reply}}">
+      <comment avatar="{{item.avatar}}" nickname="{{item.nickname}}" vote="{{item.vote}}" content="{{item.content}}" commentTime="{{item.createTime}}"></comment>
+    </block>
+  </view>
+</view>

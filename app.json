@@ -1,0 +1,49 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/newsContent/newsContent",
+    "pages/my/my",
+    "pages/logs/logs",
+    "pages/newsletter/newsletter",
+    "pages/index/video/video",
+    "pages/index/local/local"
+  ],
+  "permission" :{
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "新闻",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#232323",
+    "selectedColor": "#2983E9",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "iconPath": "images/index.png",
+        "text": "首页",
+        "selectedIconPath": "images/index_select.png"
+      },
+      {
+        "pagePath": "pages/newsletter/newsletter",
+        "iconPath": "images/now.png",
+        "selectedIconPath": "images/now_select.png",
+        "text": "快讯"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "images/me.png",
+        "selectedIconPath": "images/me_select.png"
+      }
+    ]
+  }
+}
