@@ -5,7 +5,11 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    imgUrls: [
+      'http://cms-bucket.ws.126.net/2019/03/11/d52200223af84a1c9a63783597a861ef.jpeg',
+      'http://cms-bucket.ws.126.net/2019/03/11/7aecb58ac3974a7c800821e16cf225d1.png',
+      'http://cms-bucket.ws.126.net/2019/03/11/1a7f5d3af569444197bbf26da4cd5b3a.png'
+    ],
   },
 
   /**

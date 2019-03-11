@@ -1,1 +1,5 @@
 /* pages/newsletter/newsletter.wxss */
+.swiper_news image{
+  width: 100%;
+  height: 100%;
+}
