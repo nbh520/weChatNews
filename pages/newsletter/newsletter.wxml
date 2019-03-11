@@ -1,8 +1,36 @@
 <!-- 新闻快讯--最新新闻 -->
-<swiper class='swiper_news' indicator-dots autoplay>
-  <block wx:for="{{imgUrls}}">
-    <swiper-item>
-      <image src='{{item}}' width="100vw" height="150"></image>
-    </swiper-item>
-  </block>
-</swiper>
+<view class='content'>
+  <swiper class='swiper_news' indicator-dots autoplay>
+    <block wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src='{{item}}' width="100vw" height="150"></image>
+      </swiper-item>
+    </block>
+  </swiper>
+
+  <view class='main'>
+    <view class='today_time'>
+      <view class='solid_circle news_time'></view>
+      {{todayTime}}
+    </view>
+    <block wx:for="{{newsArr}}">
+      <view class='news_main'>
+        <view class='hollow_circle'></view>
+        <text class='news_time'>{{item.ctime}}</text>
+        <view class='news_content'>
+          <view class='news_title'>{{item.title}}</view>
+          {{item.description}}
+          <view class='news_options'>
+            <image class='reply_img' src='../../images/reply.png'></image>
+            {{item.replyCount}}
+            <image class='weChat_img' src='../../images/weChat.png'></image>
+            好友
+            <image class='friend_img' src='../../images/friend.png'></image>
+            朋友圈
+          </view>
+        </view>
+      </view>
+    </block>
+    
+  </view>
+</view>
