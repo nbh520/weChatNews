@@ -31,45 +31,49 @@ Page({
       url: app.globalData.requestUrl + 'article/getCurrentNews',
       success: res => {
         let data = res.data.data
+        data.forEach(item => {
+          item.lmodify = item.lmodify.slice(11, item.lmodify.length)
+        })
+        data.sort(this.sortBy('lmodify',false))
         this.setData({
           newsArr: data
         })
       }
     })
   },
+  //根据数组里的某一个对象进行排序
+  sortBy(attr, rev) {
+    if (rev == undefined) {
+      rev = 1;
+    } else {
+      rev = (rev) ? 1 : -1;
+    }
+    return function (a, b) {
+      a = a[attr];
+      b = b[attr];
+      if (a < b) {
+        return rev * -1;
+      }
+      if (a > b) {
+        return rev * 1;
+      }
+      return 0;
+    }
+  },
   //获取今天时间
   getTodayTime(){
     let date = new Date();
     let day = date.getDay();
-    switch(day){
-      case 0:
-        day = '天'
-        break;
-      case 1:
-        day = '一'
-        break;
-      case 2:
-        day = '二'
-        break;
-      case 3:
-        day = '三'
-        break;
-      case 4:
-        day = '四'
-        break;
-      case 5:
-        day = '五'
-        break;
-      case 6:
-        day = '六'
-        break;
-    }
-    let time = `${date.getMonth() + 1}月${date.getDate()}日 · 星期${day}`
+    let week = ['天','一', '二', '三', '四', '五', '六']
+    let time = `${date.getMonth() + 1}月${date.getDate()}日 · 星期${week[day]}`
     this.setData({
       todayTime: time
     })
   },
+  //分享给好友
+  bindShareFriend(){
 
+  },
   /**
    * 生命周期函数--监听页面初次渲染完成
    */

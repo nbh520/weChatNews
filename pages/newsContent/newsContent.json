@@ -1,5 +1,6 @@
 {
     "usingComponents": {
-      "comment": "../component/comment/comment"
+      "comment": "../component/comment/comment",
+      "reply": "../component/reply/reply"
     }
 }

@@ -16,17 +16,17 @@
     <block wx:for="{{newsArr}}">
       <view class='news_main'>
         <view class='hollow_circle'></view>
-        <text class='news_time'>{{item.ctime}}</text>
+        <text class='news_time'>{{item.lmodify}}</text>
         <view class='news_content'>
-          <view class='news_title'>{{item.title}}</view>
+          <view class='news_title'>{{item.description ? item.title : '#' + item.title + '#'}}</view>
           {{item.description}}
           <view class='news_options'>
-            <image class='reply_img' src='../../images/reply.png'></image>
-            {{item.replyCount}}
+            <image wx:if="{{item.replyCount}}" class='reply_img' src='../../images/reply.png'></image>
+            <text wx:if="{{item.replyCount}}">{{item.replyCount}}</text>
             <image class='weChat_img' src='../../images/weChat.png'></image>
-            好友
+            <text bindtap='bindShareFriend'>好友</text>
             <image class='friend_img' src='../../images/friend.png'></image>
-            朋友圈
+            <text>朋友圈</text>
           </view>
         </view>
       </view>

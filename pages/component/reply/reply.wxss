@@ -1,0 +1,43 @@
+/* pages/component/reply/reply.wxss */
+.reply{
+  width: 100vw;
+  height: 120rpx;
+  border-top: 1px solid #ddd;
+  background-color: #fff;
+}
+.reply image{
+  width: 40rpx;
+  height: 40rpx;
+}
+.reply button{
+  display: inline-block;
+  padding: 0;
+  line-height: normal;
+  background-color: #fff;
+}
+.reply button::after{
+  content: '';
+  border: none;
+}
+.input_reply,.reply_option{
+  float: left;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.input_reply{
+  width: 60%;
+  box-sizing: border-box;
+  padding-left: 20rpx;
+}
+.reply_option{
+  justify-content: center;
+  width: 40%;
+}
+.input_reply .write{
+  margin-right: 20rpx;
+}
+.comment_num{
+  margin-left: 10rpx;
+  vertical-align: 3px;
+}

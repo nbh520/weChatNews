@@ -21,6 +21,7 @@ view{
   height: auto;
   padding: 10px 10px;
   box-sizing: border-box;
+  margin-bottom: 120rpx;
 }
 .news_all .news_title text{
   font-weight: 600;
@@ -68,4 +69,9 @@ view{
   font-size: 15px;
   font-weight: 600;
   margin-top: 20px;
+}
+.your_reply{
+  position: fixed;
+  bottom: 0;
+  left: 0;
 }

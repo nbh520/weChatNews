@@ -1,0 +1,21 @@
+<!--pages/component/reply/reply.wxml-->
+<view class='reply'>
+  <view class='input_reply'>
+    <image class='write' src='../../../images/write.png'></image>
+    <text>评一下</text>
+  </view>
+  <view class='reply_option'>
+    <button>
+      <image src='../../../images/reply.png'></image>
+      <text class='comment_num'>0</text>
+    </button>
+    <button>
+      <image src='../../../images/friend.png'></image>
+    </button>
+    <button>
+      <image src='../../../images/weChat.png'></image>
+    </button>
+    
+  </view>
+  
+</view>
